@@ -7,7 +7,7 @@ defineProps({
 </script>
 
 <template>
-  <div class="flex flex-col gap-5 w-72 p-5 bg-[#FFFEFE] hover:bg-white transition hover:-translate-y-1 hover:shadow-xl">
+  <div class="flex rounded-lg flex-col gap-5 w-72 p-5 bg-[#FFFEFE] hover:bg-white transition hover:-translate-y-1 hover:shadow-xl">
     <div>
       <img :src="images" alt="skill">
     </div>
