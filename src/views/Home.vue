@@ -83,7 +83,6 @@ const reviewItems = [
   <div class="tranport-container flex w-full">
     <div class="man-on-railway"
          style="background-image: url('/src/assets/images/background/man-on-railway-track.png')">
-
     </div>
     <div class="transport p-20 flex flex-col gap-16 justify-center">
       <div>
@@ -122,7 +121,7 @@ const reviewItems = [
     <div class="flex justify-center items-center gap-32">
       <div>
         <div class="mb-20 flex flex-col gap-10">
-          <h2 class="text-4xl font-bold">
+          <h2 class="text-5xl font-bold">
             Профессионалы в<br/> траспортировке
           </h2>
           <p>
@@ -131,13 +130,76 @@ const reviewItems = [
             инновационные решения для сложных логистических задач.
           </p>
         </div>
-        <Button button-classes="px-20">О нас</Button>
+        <Button buttonClasses="px-24">О нас</Button>
       </div>
       <div class="review flex flex-col flex-wrap justify-center gap-5">
         <ReviewCard v-for="(item, index) in reviewItems" :key="item.id" :images="item.images" :score="item.score"
                     :title="item.title"
                     :style="{ flexBasis: index === 0 ? '55%' : 'auto', backgroundColor: index === 0 ? 'black' : 'auto', color: index === 0 ? 'white' : 'auto' }"
         />
+      </div>
+    </div>
+  </div>
+
+  <div class="w-full flex justify-center p-32">
+    <div>
+      <h2 class="text-5xl font-bold mb-20">Наши Процессы</h2>
+      <div>
+        <div class="w-full flex gap-36 mb-10 border-b-2 pb-4">
+          <div><span class="cursor-pointer font-bold text-xl mr-10 border-b-2 pb-4 border-b-blue-700">Перед отправкой</span></div>
+          <div><span class="cursor-pointer text-[#6C6C6C] text-xl mr-10">Во время отправки</span></div>
+          <div><span class="cursor-pointer text-[#6C6C6C] text-xl mr-10">После отправки</span></div>
+        </div>
+        <div class="flex gap-16 justify-center items-center">
+          <div class="flex flex-col gap-10">
+            <p class="text-[#6C6C6C]">
+              Мы гарантируем строгое соблюдение всех<br/> процедур до, во время и после перевозки.
+            </p>
+            <div class="mb-10 flex flex-col gap-6">
+              <div class="flex items-center gap-3">
+                <div class="w-2 h-2 bg-blue-700 rotate-45"></div>
+                <span class="font-bold text-lg">Стандартные операционные процедуры по<br/> обслуживанию транспортных средств</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <div class="w-2 h-2 bg-blue-700 rotate-45"></div>
+                <span class="font-bold text-lg">План управления транспортировкой</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <div class="w-2 h-2 bg-blue-700 rotate-45"></div>
+                <span class="font-bold text-lg">Стандартные операционные процедуры для погрузки.</span>
+              </div>
+            </div>
+            <div>
+              <Button>Посмотреть детали</Button>
+            </div>
+          </div>
+          <div>
+            <img src="/src/assets/images/background/young-warehouse-workers-working.png" alt="work">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bg-[#F8F8F8] w-full flex justify-center p-32">
+    <div>
+      <div>
+        <h2 class="text-5xl font-bold mb-20">Новости</h2>
+        <div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+      <div>
+        <div>
+          <div><img src="" alt=""></div>
+          <div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
