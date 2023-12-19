@@ -117,20 +117,20 @@ const newsItem = [
         <p class="text-[#E7E7E7]">Услуги по транспортировке гарантируют быстрое и<br/> своевременное прохождение грузов
           через<br/> границы.</p>
       </div>
-      <div class="text-white font-bold text-lg flex gap-5 flex-wrap w-96 justify-between">
-        <div class="flex gap-3">
+      <div class="text-white font-bold gap-5 w-96 grid grid-cols-2 items-center">
+        <div class="flex gap-3 w-40">
           <img src="/src/assets/images/icons/check.svg" alt="check">
           <span>По морю</span>
         </div>
-        <div class="flex gap-3">
+        <div class="flex gap-3 w-40">
           <img src="/src/assets/images/icons/check.svg" alt="check">
           <span>По воздуху</span>
         </div>
-        <div class="flex gap-3">
+        <div class="flex gap-3 w-40">
           <img src="/src/assets/images/icons/check.svg" alt="check">
           <span>По Ж/Д</span>
         </div>
-        <div class="flex gap-3">
+        <div class="flex gap-3 w-40 whitespace-nowrap">
           <img src="/src/assets/images/icons/check.svg" alt="check">
           <span>Наземная перевозка</span>
         </div>
