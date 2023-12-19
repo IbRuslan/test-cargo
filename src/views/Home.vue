@@ -173,11 +173,15 @@ const newsItem = [
       <h2 class="text-5xl font-bold mb-20">Наши Процессы</h2>
       <div>
         <div class="w-full flex gap-36 mb-10 border-b-2 pb-4">
-          <div><span
-              class="cursor-pointer font-bold text-xl mr-10 border-b-2 pb-4 border-b-blue-700">Перед отправкой</span>
+          <div>
+            <span class="cursor-pointer font-bold text-xl mr-10 border-b-2 pb-4 border-b-blue-700">Перед отправкой</span>
           </div>
-          <div><span class="cursor-pointer text-[#6C6C6C] text-xl mr-10">Во время отправки</span></div>
-          <div><span class="cursor-pointer text-[#6C6C6C] text-xl mr-10">После отправки</span></div>
+          <div>
+            <span class="cursor-pointer text-[#6C6C6C] text-xl mr-10">Во время отправки</span>
+          </div>
+          <div>
+            <span class="cursor-pointer text-[#6C6C6C] text-xl mr-10">После отправки</span>
+          </div>
         </div>
         <div class="flex gap-16 justify-center items-center">
           <div class="flex flex-col gap-10">
