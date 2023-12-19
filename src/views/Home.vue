@@ -47,6 +47,33 @@ const reviewItems = [
   {id: 2, title: 'Довольных клиентов', images: '/src/assets/images/icons/clients.svg', score: 1205},
   {id: 3, title: 'Членов команды', images: '/src/assets/images/icons/team.svg', score: 120},
 ]
+
+const newsItem = [
+  {
+    id: 1,
+    title: 'Стоимость перевозки контейнеров',
+    description: 'Сталкиваетесь с проблемами стоимости и прогнозирования? Нужны решения?',
+    image: '/src/assets/images/background/a-container-gantry-crane.png',
+    type: 'Транспортировка',
+    data: {day: 16, month: 'Авг.', year: 2021}
+  },
+  {
+    id: 2,
+    title: 'Управление цепочкой поставок',
+    description: 'Управление цепочкой поставок - важная и незаменимая часть большинства бизнесов.',
+    image: '/src/assets/images/background/containers-warehouse.png',
+    type: 'Цепочки поставок',
+    data: {day: 16, month: 'Авг.', year: 2021}
+  },
+  {
+    id: 3,
+    title: 'Ваши логистические проблемы',
+    description: 'Глобальные цепочки поставок, на которые опирается множество розничных продавцов, нарушены на длительный срок.',
+    image: '/src/assets/images/background/a-container-gantry-crane.png',
+    type: 'Логистика',
+    data: {day: 16, month: 'Авг.', year: 2021}
+  },
+]
 </script>
 
 <template>
@@ -130,7 +157,7 @@ const reviewItems = [
             инновационные решения для сложных логистических задач.
           </p>
         </div>
-        <Button buttonClasses="px-24">О нас</Button>
+        <Button buttonClasses="px-20">О нас</Button>
       </div>
       <div class="review flex flex-col flex-wrap justify-center gap-5">
         <ReviewCard v-for="(item, index) in reviewItems" :key="item.id" :images="item.images" :score="item.score"
@@ -146,7 +173,9 @@ const reviewItems = [
       <h2 class="text-5xl font-bold mb-20">Наши Процессы</h2>
       <div>
         <div class="w-full flex gap-36 mb-10 border-b-2 pb-4">
-          <div><span class="cursor-pointer font-bold text-xl mr-10 border-b-2 pb-4 border-b-blue-700">Перед отправкой</span></div>
+          <div><span
+              class="cursor-pointer font-bold text-xl mr-10 border-b-2 pb-4 border-b-blue-700">Перед отправкой</span>
+          </div>
           <div><span class="cursor-pointer text-[#6C6C6C] text-xl mr-10">Во время отправки</span></div>
           <div><span class="cursor-pointer text-[#6C6C6C] text-xl mr-10">После отправки</span></div>
         </div>
@@ -183,23 +212,104 @@ const reviewItems = [
 
   <div class="bg-[#F8F8F8] w-full flex justify-center p-32">
     <div>
-      <div>
-        <h2 class="text-5xl font-bold mb-20">Новости</h2>
-        <div>
-          <div></div>
-          <div></div>
-        </div>
-      </div>
-      <div>
-        <div>
-          <div><img src="" alt=""></div>
-          <div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+      <div class="flex justify-between">
+        <h2 class="text-4xl font-bold mb-20">Новости</h2>
+        <div class="flex">
+          <div class="flex items-center justify-center w-10 h-10 bg-white">
+            <img src="/src/assets/images/icons/subsidiary/arrow-right.svg" alt="arrow-left">
+          </div>
+          <div class="flex items-center justify-center w-10 h-10 bg-blue-700 cursor-pointer">
+            <img src="/src/assets/images/icons/subsidiary/arrow-left.svg" alt="arrow-right">
           </div>
         </div>
+      </div>
+      <div class="flex gap-10">
+        <div class="flex flex-col gap-5 w-96" v-for="item in newsItem" :key="item.id">
+          <div>
+            <img :src="item.image" alt="news">
+          </div>
+          <div class="flex flex-col gap-5">
+            <div class="flex justify-between">
+              <div class="flex items-center gap-2">
+                <img src="/src/assets/images/icons/subsidiary/folder.svg" alt="folder">
+                <span class="text-[#6C6C6C]">{{ item.type }}</span>
+              </div>
+              <div class="border-r-2"></div>
+              <div class="flex items-center gap-2 mr-5">
+                <img src="/src/assets/images/icons/subsidiary/time-сircle.svg" alt="time">
+                <span class="text-[#6C6C6C]">{{ item.data.day }}, {{ item.data.month }} {{ item.data.year }}</span>
+              </div>
+            </div>
+            <div>
+              <h2 class="text-2xl font-bold pr-6">{{ item.title }}</h2>
+            </div>
+            <div>
+              <p class="text-[#6C6C6C]">{{ item.description }}</p>
+            </div>
+            <div>
+              <a class="text-lg font-bold underline hover:text-blue-400" href="#">Читать далее</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="w-full flex justify-center p-40">
+    <div class="flex gap-36">
+      <div class="flex flex-col gap-14">
+        <div class="flex flex-col gap-8">
+          <h2 class="text-4xl font-bold">Оставайтесь на связи</h2>
+          <p class="text-[#6C6C6C]">Свяжитесь с нами напрямую по телефону или заполните форму,<br/> чтобы получить бесплатную консультацию от нашего
+            персонала.</p>
+        </div>
+        <div class="flex flex-col gap-5">
+          <div class="flex flex-col gap-2">
+            <div class="flex gap-3">
+              <img src="/src/assets/images/icons/contacts/phone.svg" alt="phone">
+              <span class="text-[#6C6C6C]">Номер телефона</span>
+            </div>
+            <div>
+              <span class="text-2xl font-bold">+7 (495) 885 71 35</span>
+            </div>
+          </div>
+          <div class="flex flex-col gap-2">
+            <div class="flex gap-3">
+              <img src="/src/assets/images/icons/contacts/email.svg" alt="email">
+              <span class="text-[#6C6C6C]">Email</span>
+            </div>
+            <div>
+              <span class="font-bold">hello@cargopro.ru</span>
+            </div>
+          </div>
+          <div class="flex flex-col gap-2">
+            <div class="flex gap-3">
+              <img src="/src/assets/images/icons/contacts/place.svg" alt="place">
+              <span class="text-[#6C6C6C]">Адрес</span>
+            </div>
+            <div>
+              <span class="font-bold">ТЦ АВИАПАРК, 1 ЭТАЖ</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-col gap-14 pt-10">
+        <div class="flex gap-2 items-center">
+          <img src="/src/assets/images/icons/contacts/package.svg" alt="package">
+          <h3 class="font-bold text-xl">Напишите нам</h3>
+        </div>
+        <form class="form flex flex-col gap-8">
+          <input class="outline-none border-b border-gray-400" placeholder="Полное имя" type="text">
+          <input class="outline-none border-b border-gray-400" placeholder="Номер телефона" type="text">
+          <input class="outline-none border-b border-gray-400" placeholder="Email адрес" type="text">
+          <textarea class="h-16 mb-4 outline-none resize-none border-b border-gray-400" placeholder="Сообщение" />
+          <div>
+            <Button button-classes="flex items-center gap-3">
+              <img src="/src/assets/images/icons/subsidiary/send.svg" alt="">
+              <span>Отправить</span>
+            </Button>
+          </div>
+        </form>
       </div>
     </div>
   </div>
@@ -233,5 +343,9 @@ const reviewItems = [
 .review {
   width: 602px;
   height: 504px;
+}
+
+.form {
+  width: 420px;
 }
 </style>
