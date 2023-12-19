@@ -1,35 +1,30 @@
 # cargo-test
 
-This template should help get you started developing with Vue 3 in Vite.
-
-## Recommended IDE Setup
-
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
+### Загрузить модули.
 ```sh
 npm install
 ```
 
-### Compile and Hot-Reload for Development
-
+### Открыть проект на локальном хосте.
 ```sh
 npm run dev
 ```
 
-### Compile and Minify for Production
+В этом проекте есть три страницы которые пользователь может увидеть:
+1.Home - главная страница которую пользователь увидеть при входе. Страницу поделил на разделы:
+    TransportationSection - информация о транспортировки и логистики
+    TransportSection - информация о видах транспорта при помощи которых осуществляется доставка
+    StatisticsSection - статистика компании
+    NewsSection - раздел с новостями
+    ContactsSection - раздел о видах связи с компании и возможность написать через форму
 
-```sh
-npm run build
-```
+2.About - подробная страница о компании так же разделил на разделы:
+    AboutCompanySection - основное описание компании, цели, виденье
+    AdvantageSection - статистика компании
 
-### Lint with [ESLint](https://eslint.org/)
+3.NotFound - страница 404 в случае если страницы не существует (например: пользователь ввел неправильный url)
 
-```sh
-npm run lint
-```
+Так же есть компоненты:
+Header - шапка сайта которая на всех страницах присутствует
+Footer - конец сайта которая так же на всех страницах присутствует
+Button - универсальная кнопка которую можно использовать в любой части.

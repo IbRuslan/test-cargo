@@ -9,10 +9,25 @@ export default defineComponent({
 </script>
 
 <template>
-  <div id="app">
+  <div class="app" id="app">
     <SuperHeader/>
-    <router-view />
+    <main>
+      <router-view />
+    </main>
     <SuperFooter/>
   </div>
 </template>
 
+
+
+<style>
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex-grow: 1;
+}
+</style>
